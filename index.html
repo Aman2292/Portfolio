@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portfololio</title>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+  <body>
+    <!-- Smooth Scrolling Wrapper -->
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <!-- Existing Content Starts Here -->
+        <nav class="navbar">
+          <ul class="nav-list">
+            <li class="nav-item active"><a href="#home">Home</a></li>
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item"><a href="#stack">Stack</a></li>
+            <li class="nav-item"><a href="#services">Services</a></li>
+            <li class="nav-item"><a href="#projects">Projects</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <section id="home" class="section home-section">
+        <div class="intro-text">
+          <h1>Hello, I am Aman!</h1>
+          <p id="dynamic-text">Web Developer</p>
+        </div>
+        <div class="scrolling-text">
+          <p>AMAN CHAURASIYA </p>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="./Assets/images/Profile2.jpg" alt="Profile Picture" />
+            </div>
+            <div class="flip-card-back">
+              <video
+                src="./Assets/videos/Black and White Modern Minimalist Accounting Animated Logo (1).mp4"
+                autoplay
+                loop
+              ></video>
+            </div>
+          </div>
+        </div>
+        <button class="cssbuttons-io-button">
+          <p>Let's Work Together</p>
+          <div class="icon">
+            <svg
+              height="24"
+              width="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div class="threedimages">
+      <img class="orangecone" src="./Assets/images/orangecone.png" alt="" />
+      <img class="bluecylinder" src="./Assets/images/bluecylinder.png" alt="" />
+      <img class="bluestar" src="./Assets/images/bluestar.png" alt="" />
+      <img class="purplesphere" src="./Assets/images/purplesphere.png" alt="" />
+      <img class="yellowcube" src="./Assets/images/yellowcube.png" alt="" />
+      <img
+        class="greencylinder"
+        src="./Assets/images/greencylinder.png"
+        alt=""
+      />
+    </div>
+    <section id="about" class="section about-section">
+      <h2>About Me</h2>
+      <div class="card-container">
+        <div class="card left-card">Left Card</div>
+        <div class="card main-card">Main Card</div>
+        <div class="card right-card">Right Card</div>
+    </div>
+      <button id="cta-button" class="contact-button">Read My CV</button>
+      <div class="threedimages">
+        <img class="bluestar_about" src="./Assets/images/bluestar.png" alt="" />
+        <img class="purplesphere_about" src="./Assets/images/purplesphere.png" alt="" />
+      </div>
+    </section>
+    <section id="stack" class="section stack-section">
+      <h2>My Stack</h2>
+      <p>I specialize in HTML, CSS, JavaScript, Flutter, and more.</p>
+    </section>
+    <section id="services" class="section services-section">
+      <h2>Services</h2>
+      <p>I provide web development, UI/UX design, and app development services.</p>
+    </section>
+    <section id="projects" class="section projects-section">
+      <h2>Projects</h2>
+      <p>Check out some of my recent projects below.</p>
+    </section>
+    <section id="contact" class="section contact-section">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out via email or social media.</p>
+    </section>
+  </body>
+</html>
