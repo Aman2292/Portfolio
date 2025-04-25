@@ -37,7 +37,7 @@ body {
 
 .navbar {
   position : fixed;
-  margin-left: 410px;
+  margin-left: 470px;
   margin-top: 1rem;
   background-color: #fafcff;
   padding: 10px 20px;
@@ -515,13 +515,11 @@ body {
 
 #cta-button {
   font-family: 'poppins', sans-serif;
-  display: none; /* Initially hidden */
-  margin-top: 10px; /* Space below the cards */
   padding: 10px 20px; /* Button padding */
   background-color: #fff;
   font-weight: 500;
   font-size: 20px ;
-  border-radius: 20px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -548,24 +546,423 @@ body {
 
 
 .stack-section {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  gap: 20px; /* Spacing between section elements */
+  padding: 20px;
+  width: 100%;
+  align-items: center; /* Center content horizontally */
   background-color: #fafcff; /* Default background */
 }
 
-.services-section {
-  background-color: #f4f4f4; /* Slightly darker background */
+.stack-section > h2,
+.stack-section > p {
+  text-align: center; /* Center-align the heading and paragraph */
 }
+
+.cards-container {
+  display: grid; /* Use CSS Grid for card layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(5, auto); /* 5 rows (auto height for each row) */
+  gap: 100px; /* Spacing between cards */
+  justify-content: center; /* Center cards horizontally */
+  width: 100%; /* Full width of the parent */
+  max-width: 900px; 
+  margin-bottom: 100px;
+}
+
+.stack-card {
+  position: relative;
+  width: 290px; /* Fixed width for consistency */
+  height: 280px; /* Fixed height for consistency */
+  background-color: #fff;
+  border-radius: 15px; /* Consistent radius */
+  overflow: hidden;
+  box-shadow: 0 0 0 20px #6670ff0d;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background Overlay */
+.stack-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1; /* Below hover text but above image */
+  border-radius: 15px;
+}
+
+/* Image Styling */
+.stack-card img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); /* Center the image */
+  width: 120px; /* Adjust image size */
+  height: auto;
+  object-fit: contain; /* Ensure the image scales properly */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth fade-out and scaling effect */
+  z-index: 2; /* Above the overlay */
+}
+
+/* Static Text */
+.stack-card p {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the text horizontally */
+  color: black;
+  z-index: 3; /* Ensure text is above everything else */
+  opacity: 1; /* Initially visible */
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-out effect */
+}
+
+/* Hover Text */
+.stack-card::after {
+  content: attr(data-hover-text); /* Dynamically display hover text */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+  z-index: 4; /* Ensure hover text is above everything else */
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Hover Effects */
+.stack-card:hover::before {
+  opacity: 1; /* Show the overlay */
+}
+
+.stack-card:hover img {
+  transform: translate(-50%, -50%) scale(1.2); /* Scale up the image */
+  opacity: 0; /* Slightly dim the image */
+}
+
+.stack-card:hover p {
+  opacity: 0; /* Hide the static text */
+}
+
+.stack-card:hover::after {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  opacity: 1; /* Show the hover text */
+}
+
+
+
 
 .projects-section {
-  background-color: #ffffff; /* White background */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  gap: 20px; /* Spacing between section elements */
+  padding: 20px;
+  width: 100%;
+  align-items: center; /* Center content horizontally */
+  background-color: #fafcff; /* Default background */
 }
 
+.projectcards-container {
+  display: grid; /* Use CSS Grid for card layout */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(auto-fit, minmax(400px, auto)); /* Auto rows */
+  gap: 80px; /* Spacing between cards */
+  justify-content: center; /* Center cards horizontally */
+  width: 100%; /* Full width of the parent */
+  max-width: 900px;
+  margin-bottom: 100px;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column; /* Stack card, title, and description vertically */
+  align-items: flex-start; /* Align items to the left */
+  gap: 10px; /* Spacing between card, title, and description */
+}
+
+.project-card {
+  position: relative;
+  width: 600px; /* Fixed width for consistency */
+  height: 350px; /* Fixed height for consistency */
+  background-color: #fff;
+  border-radius: 15px; /* Consistent radius */
+  overflow: hidden;
+  box-shadow: 0 0 0 20px #6670ff0d;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1; /* Below hover text but above image */
+  border-radius: 15px;
+}
+
+/* Image Styling */
+.project-card img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); /* Center the image */
+  width: 120px; /* Adjust image size */
+  height: auto;
+  object-fit: contain; /* Ensure the image scales properly */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth fade-out and scaling effect */
+  z-index: 2; /* Above the overlay */
+}
+
+/* Static Text */
+.project-card p {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the text horizontally */
+  color: black;
+  z-index: 3; /* Ensure text is above everything else */
+  opacity: 1; /* Initially visible */
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-out effect */
+}
+
+/* Hover Text */
+.project-card::after {
+  content: attr(data-hover-text); /* Dynamically display hover text */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+  z-index: 4; /* Ensure hover text is above everything else */
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Hover Effects */
+.project-card:hover::before {
+  opacity: 1; /* Show the overlay */
+}
+
+.project-card:hover img {
+  transform: translate(-50%, -50%) scale(1.2); /* Scale up the image */
+  opacity: 0; /* Slightly dim the image */
+}
+
+.project-card:hover p {
+  opacity: 0; /* Hide the static text */
+}
+
+.project-card:hover::after {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  opacity: 1; /* Show the hover text */
+}
+
+/* Title and Description Styling */
+.project-item h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: #333; /* Dark gray for contrast */
+}
+
+
+
+.project-item p {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  margin: 0; /* Remove default margin */
+  color: #666; /* Light gray for description */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
 .contact-section {
-  background-color: #f9f9f9; /* Light background */
+  height: auto; /* Adjust height to fit content */
+  width: 1550px;
+  border-radius: 50px;
+  background-color: #e8e6e6; /* Light background color for the entire footer */
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 
 
+/* Contact Column */
+.contact-column,
+.links-column,
+.social-column {
+  width: 33%;
+}
 
+.contact-column h3,
+.links-column h3,
+.social-column h3 {
+  margin-top: 50px; /* Reduced margin for better spacing */
+  margin-left: 50px;
+  font-size: 35px;
+}
+
+/* Contact Column */
+.contact-column a {
+  font-size: 20px;
+  margin-left: 50px;
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+
+.contact-column a:hover {
+  color: #ff6b35; /* Orange accent color on hover */
+
+}
+
+/* Links Column */
+.links-column ul,
+.social-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links-column ul li a,
+.social-column ul li a {
+  font-size: 20px;
+  position: relative;
+  z-index: 10; /* Ensure links are above other elements */
+  margin-left: 50px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.links-column ul li a:hover,
+.social-column ul li a:hover {
+  color: #ff6b35 !important; /* Orange accent color */
+}
+
+/* Social Column */
+.social-column {
+  position: relative;
+  overflow: hidden; /* Clip the branding text */
+  padding-bottom: 0; /* Remove extra padding */
+}
+
+.social-column ul {
+  margin-bottom: 20px; /* Space between social links and branding */
+}
+
+/* Branding */
+.branding {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin-top: -180px; /* Pull the branding up to overlap with the bottom */
+}
+
+.branding h1 {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 235px;
+  font-weight: 900;
+  line-height: 1; /* Reduce line height to fit better */
+  transform: translateY(240px); /* Adjust vertical position */
+}
+
+/* Custom Cursor */
+#custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.cursor-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #6f4eff; /* Purple neon color */
+  animation: neon-pulse 1.5s infinite alternate; /* Pulsating effect */
+}
+
+.cursor-button {
+  font-family: 'Poppins', sans-serif;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #6f4eff; /* Purple neon color */
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(111, 78, 255, 0.5); /* Add a subtle glow */
+}
 
 
 
