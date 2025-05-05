@@ -1,251 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css" />
-    <title>Portfololio</title>
-  </head>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
-  <body>
-    <!-- Smooth Scrolling Wrapper -->
-    <div id="smooth-wrapper">
-      <div id="smooth-content">
-        <!-- Existing Content Starts Here -->
-        <nav class="navbar">
-          <ul class="nav-list">
-            <li class="nav-item active"><a href="#home">Home</a></li>
-            <li class="nav-item"><a href="#about">About</a></li>
-            <li class="nav-item"><a href="#stack">Stack</a></li>
-            <li class="nav-item"><a href="#projects">Projects</a></li>
-            <li class="nav-item"><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <section id="home" class="section home-section">
-        <div class="intro-text">
-          <h1>Hello, I am Aman!</h1>
-          <p id="dynamic-text">Web Developer</p>
-        </div>
-        <div class="scrolling-text">
-          <p>AMAN CHAURASIYA </p>
-        </div>
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="./Assets/images/Profile2.jpg" alt="Profile Picture" />
-            </div>
-            <div class="flip-card-back">
-              <video
-                src="./Assets/videos/Black and White Modern Minimalist Accounting Animated Logo (1).mp4"
-                autoplay
-                loop
-              ></video>
-            </div>
-          </div>
-        </div>
-        <button class="cssbuttons-io-button">
-          <p>Let's Work Together</p>
-          <div class="icon">
-            <svg
-              height="24"
-              width="24"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0h24v24H0z" fill="none"></path>
-              <path
-                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </div>
-        </button>
-      </div>
-    </div>
-    <div class="threedimages">
-      <img class="orangecone" src="./Assets/images/orangecone.png" alt="" />
-      <img class="bluecylinder" src="./Assets/images/bluecylinder.png" alt="" />
-      <img class="bluestar" src="./Assets/images/bluestar.png" alt="" />
-      <img class="purplesphere" src="./Assets/images/purplesphere.png" alt="" />
-      <img class="yellowcube" src="./Assets/images/yellowcube.png" alt="" />
-      <img
-        class="greencylinder"
-        src="./Assets/images/greencylinder.png"
-        alt=""
-      />
-    </div>
-    <section id="about" class="section about-section">
-      <h2>About Me</h2>
-      <div class="card-container">
-        <div class="card left-card">Left Card</div>
-        <div class="card main-card">Main Card</div>
-        <div class="card right-card">Right Card</div>
-    </div>
-      <button id="cta-button" class="contact-button">Read My CV</button>
-      <div class="threedimages">
-        <img class="bluestar_about" src="./Assets/images/bluestar.png" alt="" />
-        <img class="purplesphere_about" src="./Assets/images/purplesphere.png" alt="" />
-      </div>
-      
-    </section>
-    <section id="stack" class="section stack-section">
-      <h2>My Stack</h2>
-      <div class="cards-container">
-        <div class="stack-card" data-hover-text="HTML5">
-          <img src="./Assets/images/Tech-Stack-Images/html-icon.png" alt="Card Image">
-          <p>HTML</p>
-        </div>
-        <div class="stack-card" data-hover-text="Cross-platform development">
-          <img src="./Assets/images/Tech-Stack-Images/flutter-icon.png" alt="Card Image">
-          <p>FLUTTER</p>
-        </div>
-        <div class="stack-card" data-hover-text="Mobile app development">
-          <img src="./Assets/images/Tech-Stack-Images/android-icon.png" alt="Card Image">
-          <p>ANDROID</p>
-        </div>
-        <div class="stack-card" data-hover-text="Styling web pages">
-          <img src="./Assets/images/Tech-Stack-Images/css-icon.png" alt="Card Image">
-          <p>CSS</p>
-        </div>
-        <div class="stack-card" data-hover-text="Backend as a service">
-          <img src="./Assets/images/Tech-Stack-Images/Firebase-logo-02.png" alt="Card Image">
-          <p>FIREBASE</p>
-        </div>
-        <div class="stack-card" data-hover-text="Android app IDE">
-          <img src="./Assets/images/Tech-Stack-Images/android-studio-icon.png" alt="Card Image">
-          <p>ANDROID STUDIO</p>
-        </div>
-        <div class="stack-card" data-hover-text="Object-oriented programming">
-          <img src="./Assets/images/Tech-Stack-Images/java-programming-language-icon.png" alt="Card Image">
-          <p>JAVA</p>
-        </div>
-        <div class="stack-card" data-hover-text="Dynamic web interactions">
-          <img src="./Assets/images/Tech-Stack-Images/javascript-programming-language-icon.png" alt="Card Image">
-          <p>JAVASCRIPT</p>
-        </div>
-        <div class="stack-card" data-hover-text="Server-side runtime">
-          <img src="./Assets/images/Tech-Stack-Images/node-js-icon.png" alt="Card Image">
-          <p>NODE JS</p>
-        </div>
-        <div class="stack-card" data-hover-text="Version control">
-          <img src="./Assets/images/Tech-Stack-Images/github-icon.png" alt="Card Image">
-          <p>GIT HUB</p>
-        </div>
-        <div class="stack-card" data-hover-text="Distributed version control">
-          <img src="./Assets/images/Tech-Stack-Images/git-icon.png" alt="Card Image">
-          <p>GIT</p>
-        </div>
-        <div class="stack-card" data-hover-text="API testing tool">
-          <img src="./Assets/images/Tech-Stack-Images/postman-icon.png" alt="Card Image">
-          <p>POSTMAN</p>
-        </div>
-        <div class="stack-card" data-hover-text="Containerization platform">
-          <img src="./Assets/images/Tech-Stack-Images/docker-icon.png" alt="Card Image">
-          <p>DOCKER</p>
-        </div>
-        <div class="stack-card" data-hover-text="Code editor">
-          <img src="./Assets/images/Tech-Stack-Images/visual-studio-code-icon.png" alt="Card Image">
-          <p>VISUAL STUDIO CODE</p>
-        </div>
-        <div class="stack-card" data-hover-text="Cloud computing services">
-          <img src="./Assets/images/Tech-Stack-Images/aws-icon.png" alt="Card Image">
-          <p>AWS</p>
-        </div>
-      </div>
-    </section>
-    
-    
-    <section id="projects" class="section projects-section">
-      <h2>Projects</h2>
-      <div class="projectcards-container">
-        <!-- Project Item -->
-        <div class="project-item">
-          <div class="project-card" data-hover-text="HTML5">
-            <img src="./Assets/images/Tech-Stack-Images/html-icon.png" alt="Card Image">
-            <p>HTML</p>
-          </div>
-          <h1>HTML Project</h1>
-          <p>This is a project showcasing HTML5 features.</p>
-        </div>
-    
-        <!-- Project Item -->
-        <div class="project-item">
-          <div class="project-card" data-hover-text="Cross-platform development">
-            <img src="./Assets/images/Tech-Stack-Images/flutter-icon.png" alt="Card Image">
-            <p>FLUTTER</p>
-          </div>
-          <h1>Flutter App</h1>
-          <p>A cross-platform mobile app built using Flutter.</p>
-        </div>
-    
-        <!-- Project Item -->
-        <div class="project-item">
-          <div class="project-card" data-hover-text="Mobile app development">
-            <img src="./Assets/images/Tech-Stack-Images/android-icon.png" alt="Card Image">
-            <p>ANDROID</p>
-          </div>
-          <h1>Android App</h1>
-          <p>A native Android application for productivity.</p>
-        </div>
+    <title>Portfolio</title>
+</head>
 
-        <div class="project-item">
-          <div class="project-card" data-hover-text="Mobile app development">
-            <img src="./Assets/images/Tech-Stack-Images/android-icon.png" alt="Card Image">
-            <p>ANDROID</p>
-          </div>
-          <h1>Android App</h1>
-          <p>A native Android application for productivity.</p>
+<body>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li class="nav-item active"><a href="#home">Home</a></li>
+                    <li class="nav-item"><a href="#about">About</a></li>
+                    <li class="nav-item"><a href="#stack">Stack</a></li>
+                    <li class="nav-item"><a href="#projects">Projects</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <section id="home" class="section home-section">
+                <div class="intro-text">
+                    <h1>Hello, I am Aman!</h1>
+                    <p id="dynamic-text">Web Developer</p>
+                </div>
+                <div class="scrolling-text">
+                    <p>AMAN CHAURASIYA</p>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="./Assets/images/Profile2.jpg" alt="Profile Picture" />
+                        </div>
+                        <div class="flip-card-back">
+                            <video src="./Assets/videos/Black and White Modern Minimalist Accounting Animated Logo (1).mp4" autoplay loop></video>
+                        </div>
+                    </div>
+                </div>
+                <button class="cssbuttons-io-button">
+                  <p>Let's Work Together</p>
+                  <div class="icon">
+                    <svg height="24" width="24"viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div class="threedimages">
+              <img class="orangecone" src="./Assets/images/orangecone.png" alt="" />
+              <img class="bluecylinder" src="./Assets/images/bluecylinder.png" alt="" />
+              <img class="bluestar" src="./Assets/images/bluestar.png" alt="" />
+              <img class="purplesphere" src="./Assets/images/purplesphere.png" alt="" />
+              <img class="yellowcube" src="./Assets/images/yellowcube.png" alt="" />
+              <img class="greencylinder" src="./Assets/images/greencylinder.png"alt="" />
+            </div>
+
+            <section id="about" class="section about-section">
+                <h2>About Me</h2>
+                <div class="card-container">
+                    <div class="card left-card">Left Card</div>
+                    <div class="card main-card">Main Card</div>
+                    <div class="card right-card">Right Card</div>
+                </div>
+                <button id="cta-button" class="contact-button">Read My CV</button>
+                <div class="threedimages">
+                    <img class="bluestar_about" src="./Assets/images/bluestar.png" alt="Blue Star About" />
+                    <img class="purplesphere_about" src="./Assets/images/purplesphere.png" alt="Purple Sphere About" />
+                </div>
+
+                <div class="timeline-container">
+                    <h2>My Professional Journey</h2>
+                    <div class="timeline">
+                        <div class="section-label">🎓<br>Education</div>
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <h3>BSc Computer Science</h3>
+                                <p>Pillai College, Panvel (2023–2025)<br>CGPA: 8.50/10</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <h3>HSC (Science)</h3>
+                                <p>Christ Academy Jr. College, 2022</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <h3>SSC</h3>
+                                <p>I.E.S Navi Mumbai High School, 2020</p>
+                            </div>
+                        </div>
+                        <div class="section-label">💼<br>Internships</div>
+                        <div class="timeline-item left internship">
+                            <div class="timeline-content">
+                                <h3>Help for Coders</h3>
+                                <p>Content Creator Intern (Mar 2021 – Oct 2022)<br>Produced Canva posts, boosted reach by 20%.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right internship">
+                            <div class="timeline-content">
+                                <h3>Programming Hub</h3>
+                                <p>Technical Content Intern (Apr 2024 – Jul 2024)<br>Built JavaScript projects for Udemy.</p>
+                            </div>
+                        </div>
+                        <div class="section-label">🚀<br>Projects</div>
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <h3>Liftly</h3>
+                                <p>Ride-sharing app with SOS & live tracking.<br><strong>Stack:</strong> Flutter, Firebase, Node.js</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <h3>StudySphere</h3>
+                                <p>Student-focused app for academic progress.<br><strong>Stack:</strong> Flutter, SQLite</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <h3>Spotify Clone</h3>
+                                <p>Music streaming UI with Firebase auth.<br><strong>Stack:</strong> Flutter, Firebase</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left">
+                            <div class="timeline-content">
+                                <h3>GovMedPortal</h3>
+                                <p>Hospital management with real-time booking.<br><strong>Stack:</strong> Java, MySQL, HTML, CSS</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right">
+                            <div class="timeline-content">
+                                <h3>Expense Tracker</h3>
+                                <p>Visualized categorized expenses.<br><strong>Stack:</strong> JS, Firebase</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="stack" class="section stack-section">
+                <h2>My Stack</h2>
+                <div class="cards-container">
+                    <div class="stack-card" data-hover-text="HTML5">
+                        <img src="./Assets/images/Tech-Stack-Images/html-icon.png" alt="HTML Icon">
+                        <p>HTML</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Cross-platform development">
+                        <img src="./Assets/images/Tech-Stack-Images/flutter-icon.png" alt="Flutter Icon">
+                        <p>FLUTTER</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Mobile app development">
+                        <img src="./Assets/images/Tech-Stack-Images/android-icon.png" alt="Android Icon">
+                        <p>ANDROID</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Styling web pages">
+                        <img src="./Assets/images/Tech-Stack-Images/css-icon.png" alt="CSS Icon">
+                        <p>CSS</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Backend as a service">
+                        <img src="./Assets/images/Tech-Stack-Images/Firebase-logo-02.png" alt="Firebase Icon">
+                        <p>FIREBASE</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Android app IDE">
+                        <img src="./Assets/images/Tech-Stack-Images/android-studio-icon.png" alt="Android Studio Icon">
+                        <p>ANDROID STUDIO</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Object-oriented programming">
+                        <img src="./Assets/images/Tech-Stack-Images/java-programming-language-icon.png" alt="Java Icon">
+                        <p>JAVA</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Dynamic web interactions">
+                        <img src="./Assets/images/Tech-Stack-Images/javascript-programming-language-icon.png" alt="JavaScript Icon">
+                        <p>JAVASCRIPT</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Server-side runtime">
+                        <img src="./Assets/images/Tech-Stack-Images/node-js-icon.png" alt="Node.js Icon">
+                        <p>NODE JS</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Version control">
+                        <img src="./Assets/images/Tech-Stack-Images/github-icon.png" alt="GitHub Icon">
+                        <p>GIT HUB</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Distributed version control">
+                        <img src="./Assets/images/Tech-Stack-Images/git-icon.png" alt="Git Icon">
+                        <p>GIT</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="API testing tool">
+                        <img src="./Assets/images/Tech-Stack-Images/postman-icon.png" alt="Postman Icon">
+                        <p>POSTMAN</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Containerization platform">
+                        <img src="./Assets/images/Tech-Stack-Images/docker-icon.png" alt="Docker Icon">
+                        <p>DOCKER</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Code editor">
+                        <img src="./Assets/images/Tech-Stack-Images/visual-studio-code-icon.png" alt="VS Code Icon">
+                        <p>VISUAL STUDIO CODE</p>
+                    </div>
+                    <div class="stack-card" data-hover-text="Cloud computing services">
+                        <img src="./Assets/images/Tech-Stack-Images/aws-icon.png" alt="AWS Icon">
+                        <p>AWS</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section projects-section">
+                <h2>Projects</h2>
+                <div class="projectcards-container">
+                    <div class="project-item">
+                        <a href="index1.html" class="project-card" data-hover-text="HTML5">
+                            <img src="./Assets/images/Tech-Stack-Images/html-icon.png" alt="HTML Icon">
+                        </a>
+                        <h1>HTML Project</h1>
+                        <p>This is a project showcasing HTML5 features.</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-card" data-hover-text="Cross-platform development">
+                            <img src="./Assets/images/Tech-Stack-Images/flutter-icon.png" alt="Flutter Icon">
+                            <p>FLUTTER</p>
+                        </div>
+                        <h1>Flutter App</h1>
+                        <p>A cross-platform mobile app built using Flutter.</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-card" data-hover-text="Mobile app development">
+                            <img src="./Assets/images/Tech-Stack-Images/android-icon.png" alt="Android Icon">
+                            <p>ANDROID</p>
+                        </div>
+                        <h1>Android App</h1>
+                        <p>A native Android application for productivity.</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="contact-section" id="contact">
+                <div class="container">
+                    <div class="contact-column">
+                        <h3>Contact Me</h3>
+                        <a href="#" class="link" data-tooltip="Book a Call with me">Book a Call</a>
+                        <a href="mailto:amanchaurasiya2292@gmail.com" class="link" data-tooltip="Send me an email">amanchaurasiya2292@gmail.com</a>
+                    </div>
+                    <div class="links-column">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="#" class="link" data-tooltip="Go to Home Page">Home</a></li>
+                            <li><a href="#" class="link" data-tooltip="Check out the 404 Page">404 Page</a></li>
+                            <li><a href="#" class="link" data-tooltip="View Licensing Details">Licensing</a></li>
+                        </ul>
+                    </div>
+                    <div class="social-column">
+                        <h3>Social</h3>
+                        <ul>
+                            <li><a href="#" class="link" data-tooltip="Visit my GitHub Profile">GitHub</a></li>
+                            <li><a href="#" class="link" data-tooltip="Visit my X Profile">X</a></li>
+                            <li><a href="#" class="link" data-tooltip="Visit my LinkedIn Profile">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="branding">
+                    <h1>ENORMOUS</h1>
+                </div>
+            </footer>
+
+            <div id="custom-cursor" class="cursor-dot"></div>
         </div>
-        <div class="project-item">
-          <div class="project-card" data-hover-text="Mobile app development">
-            <img src="./Assets/images/Tech-Stack-Images/android-icon.png" alt="Card Image">
-            <p>ANDROID</p>
-          </div>
-          <h1>Android App</h1>
-          <p>A native Android application for productivity.</p>
-        </div>
-    
-        <!-- Repeat for other cards -->
-      </div>
-    </section>
-    <footer class="contact-section">
-      <div class="container">
-        <!-- Contact Section -->
-        <div class="contact-column">
-          <h3>Contact Me</h3>
-          <a href="#" class="link" data-tooltip="Book a Call with me">Book a Call</a>
-          <a href="#" class="link" data-tooltip="Send me an email">amanchaurasiya2292@gmail.com</a>
-        </div>
-    
-        <!-- Useful Links -->
-        <div class="links-column">
-          <h3>Useful Links</h3>
-          <ul>
-            <li><a href="#" class="link" data-tooltip="Go to Home Page">Home</a></li>
-            <li><a href="#" class="link" data-tooltip="Check out the 404 Page">404 Page</a></li>
-            <li><a href="#" class="link" data-tooltip="View Licensing Details">Licensing</a></li>
-          </ul>
-        </div>
-    
-        <!-- Social Media -->
-        <div class="social-column">
-          <h3>Social</h3>
-          <ul>
-            <li><a href="#" class="link" data-tooltip="Visit my GitHub Profile">GitHub</a></li>
-            <li><a href="#" class="link" data-tooltip="Visit my X Profile">X</a></li>
-            <li><a href="#" class="link" data-tooltip="Visit my LinkedIn Profile">LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- Branding -->
-      <div class="branding">
-        <h1>ENORMOUS</h1>
-      </div>
-    </footer>
-    
-    <!-- Custom Cursor -->
-    <div id="custom-cursor" class="cursor-dot"></div>
-    </body>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>

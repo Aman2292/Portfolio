@@ -1,87 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Card Hover Effect</title>
-</head>
-<style>
-  * {
-    box-sizing: border-box;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details</title>
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <!-- Blurred Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-button link" data-tooltip="Go Back">Back to Projects</a>
+      </nav>
+      
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="cursor-dot"></div>
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
+    <!-- Main Content -->
+    <main class="project-details">
+      <!-- Title Section -->
+      <section class="title-section">
+        <h1>Project Title</h1>
+      </section>
 
-.card-container {
-    position: relative;
-    width: 500px; /* Adjusted to match the main card width */
-    height: 200px;
-    perspective: 1000px;
-}
+      <!-- Image Gallery -->
+      <section class="image-gallery">
+        <div class="image-card">
+          <img src="./Assets/images/bluecylinder.png" alt="Image 1" />
+        </div>
+        <div class="image-card">
+          <img src="./Assets/images/orangecone.png" alt="Image 2" />
+        </div>
+        <div class="image-card">
+          <img src="./Assets/images/greencylinder.png" alt="Image 3" />
+        </div>
+      </section>
 
-.card {
-    position: absolute;
-    width: 400px;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: 0 0 0 20px #6670ff0d;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    opacity: 0;
-}
+      <!-- Sidebar and Project Details -->
+      <section class="details-section">
+        <div class="sidebar">
+          <p><strong>Category:</strong> Web Development</p>
+          <p><strong>Duration:</strong> 3 Months</p>
+          <div class="buttons">
+            <button class="preview-button link" data-tooltip="Preview Project">
+              Preview
+            </button>
+            <button class="remix-button link" data-tooltip="Remix Template">
+              Remix
+            </button>
+          </div>
+        </div>
+        <div class="project-content">
+          <h2>My Approach</h2>
+          <p>
+            Vision and Innovation: Identifying Unique Challenges Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Distinctio nemo nulla,
+            soluta expedita sapiente libero, reprehenderit porro, corporis
+            mollitia quidem accusantium voluptas commodi molestiae dignissimos
+            itaque. Accusantium molestiae recusandae similique! Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Dolorem maxime fugit
+            fugiat explicabo aspernatur neque voluptate quisquam? Quidem
+            asperiores quasi eligendi, repudiandae debitis modi, odit dolore
+            illo distinctio, sunt praesentium.
+          </p>
+          <p>
+            Resolving Complex Problems with User-Centric Design Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Dolorem doloremque
+            necessitatibus dolores, exercitationem provident ipsa. Odio nobis
+            nihil dolor dolorem beatae eveniet exercitationem veniam! Harum
+            consectetur nam natus ipsum saepe. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Architecto cupiditate, iusto molestiae
+            esse libero ea natus deserunt quaerat molestias at aperiam. Aut eius
+            tempore asperiores natus, error alias ex cum! Lorem ipsum dolor sit,
+            amet consectetur adipisicing elit. Numquam voluptatibus quo, fuga
+            quasi amet laudantium nemo, repudiandae tenetur possimus iste
+            obcaecati! Commodi repudiandae voluptatibus possimus sapiente,
+            dolores ratione debitis ducimus?
+          </p>
+          <p>
+            Meeting User Needs through Detailed Pages and Features Avenzor
+            blends cutting-edge design with seamless functionality, offering the
+            ultimate platform to showcase your portfolio with impact and
+            precision. Tailored for web designers, creatives, and digital
+            professionals, this Framer template delivers a visually striking
+            layout that highlights your expertise with elegance. My Approach
+            Avenzor is designed to provide a seamless, engaging, and visually
+            compelling digital experience for creatives, web designers, and
+            digital professionals. My approach focuses on crafting a template
+            that not only enhances aesthetic appeal but also ensures high
+            functionality, helping users showcase their work with impact and
+            clarity. Avenzor combines cutting-edge design with a user-friendly
+            structure, ensuring that your portfolio feels both personal and
+            professional. Vision and Innovation Avenzor is built with a
+            forward-thinking approach, embracing modern web trends and
+            innovative design principles. With dynamic interactions, carefully
+            curated color styles, and smooth effects, this template creates a
+            portfolio experience that feels interactive rather than static.
+            Fully optimized for SEO and performance, Avenzor ensures your work
+            gains the visibility it deserves while providing a structured,
+            immersive user journey. Identifying Unique Challenges In an
+            increasingly competitive digital landscape, standing out is one of
+            the greatest challenges for creatives. Portfolios need to do more
+            than just showcase work—they must tell a story, communicate
+            expertise, and build trust with potential clients or employers.
+            Avenzor solves this challenge by offering an intuitive layout that
+            balances visual storytelling with a professional, polished look. It
+            provides a framework where personal branding and credibility are
+            seamlessly integrated. Resolving Complex Problems Managing an art
+            e-commerce platform can be complex—from product updates to secure
+            transactions and real-time inventory management. Plywood streamlines
+            these processes through its integrated CMS and Frameship-powered
+            Shopify features, ensuring that updating products, handling
+            checkouts, and tracking inventory are as effortless as they are
+            secure. User-Centric Design Avenzor is crafted with the end-user in
+            mind, ensuring effortless navigation and an engaging experience.
+            From structured project pages to well-organized article sections,
+            every detail is designed to maximize readability and interaction.
+            The template's use of components, forms, and link styles enhances
+            accessibility, making it easy for visitors to explore your work and
+            reach out for collaboration or inquiries. Meeting User Needs Whether
+            you're a freelancer, digital professional, or creative agency,
+            Avenzor is built to cater to your specific needs. The template
+            includes dedicated sections for showcasing past projects, writing
+            insightful articles, and sharing your professional journey. With
+            built-in legal pages and a contact form, Avenzor establishes trust
+            while providing clear pathways for engagement. Detailed Pages and
+            Features Home: A visually striking introduction that highlights your
+            expertise and invites visitors to explore your work. About: A
+            dedicated space to showcase your journey, experience, and
+            professional background. Projects & Project Pages (CMS): A
+            structured portfolio section with CMS integration, making it easy to
+            add new case studies and highlight past work. Articles & Article
+            Pages (CMS): A dynamic blog section where you can share insights,
+            industry trends, or personal reflections. Contact: A streamlined
+            page with integrated forms, making it effortless for visitors to
+            connect with you. Legal (CMS): A professionally structured page to
+            include privacy policies, terms, or other important legal
+            information. 404: A custom-designed error page that maintains the
+            aesthetic and usability of your site even in navigation mishaps.
+          </p>
+          <p>Accessibility and Optimization for All Users</p>
+          <p>
+            Conclusion Avenzor blends cutting-edge design with seamless
+            functionality, offering the ultimate platform to showcase your
+            portfolio with impact and precision. Tailored for web designers,
+            creatives, and digital professionals, this Framer template delivers
+            a visually striking layout that highlights your expertise with
+            elegance. My Approach Avenzor is designed to provide a seamless,
+            engaging, and visually compelling digital experience for creatives,
+            web designers, and digital professionals. My approach focuses on
+            crafting a template that not only enhances aesthetic appeal but also
+            ensures high functionality, helping users showcase their work with
+            impact and clarity. Avenzor combines cutting-edge design with a
+            user-friendly structure, ensuring that your portfolio feels both
+            personal and professional. Vision and Innovation Avenzor is built
+            with a forward-thinking approach, embracing modern web trends and
+            innovative design principles. With dynamic interactions, carefully
+            curated color styles, and smooth effects, this template creates a
+            portfolio experience that feels interactive rather than static.
+            Fully optimized for SEO and performance, Avenzor ensures your work
+            gains the visibility it deserves while providing a structured,
+            immersive user journey. Identifying Unique Challenges In an
+            increasingly competitive digital landscape, standing out is one of
+            the greatest challenges for creatives. Portfolios need to do more
+            than just showcase work—they must tell a story, communicate
+            expertise, and build trust with potential clients or employers.
+            Avenzor solves this challenge by offering an intuitive layout that
+            balances visual storytelling with a professional, polished look. It
+            provides a framework where personal branding and credibility are
+            seamlessly integrated. Resolving Complex Problems Managing an art
+            e-commerce platform can be complex—from product updates to secure
+            transactions and real-time inventory management. Plywood streamlines
+            these processes through its integrated CMS and Frameship-powered
+            Shopify features, ensuring that updating products, handling
+            checkouts, and tracking inventory are as effortless as they are
+            secure. User-Centric Design Avenzor is crafted with the end-user in
+            mind, ensuring effortless navigation and an engaging experience.
+            From structured project pages to well-organized article sections,
+            every detail is designed to maximize readability and interaction.
+            The template's use of components, forms, and link styles enhances
+            accessibility, making it easy for visitors to explore your work and
+            reach out for collaboration or inquiries. Meeting User Needs Whether
+            you're a freelancer, digital professional, or creative agency,
+            Avenzor is built to cater to your specific needs. The template
+            includes dedicated sections for showcasing past projects, writing
+            insightful articles, and sharing your professional journey. With
+            built-in legal pages and a contact form, Avenzor establishes trust
+            while providing clear pathways for engagement. Detailed Pages and
+            Features Home: A visually striking introduction that highlights your
+            expertise and invites visitors to explore your work. About: A
+            dedicated space to showcase your journey, experience, and
+            professional background. Projects & Project Pages (CMS): A
+            structured portfolio section with CMS integration, making it easy to
+            add new case studies and highlight past work. Articles & Article
+            Pages (CMS): A dynamic blog section where you can share insights,
+            industry trends, or personal reflections. Contact: A streamlined
+            page with integrated forms, making it effortless for visitors to
+            connect with you. Legal (CMS): A professionally structured page to
+            include privacy policies, terms, or other important legal
+            information. 404: A custom-designed error page that maintains the
+            aesthetic and usability of your site even in navigation mishaps.
+          </p>
+        </div>
+      </section>
+    </main>
 
-.main-card {
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 15px 30px;
-    backdrop-filter: blur(50px);
-    opacity: 1;
-    z-index: 1;
-}
-
-.card-container:hover .left-card {
-    transform: translateX(-100%);
-    opacity: 1;
-    z-index: 2;
-}
-
-.card-container:hover .right-card {
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 2;
-}
-
-.left-card {
-    width: 500px; /* Match main card width */
-    height: 200px;
-    background-color: #ffcccb;
-}
-
-.right-card {
-    width: 500px; /* Match main card width */
-    height: 200px;
-    background-color: #add8e6;
-}
-
-
-</style>
-
-<body>
-    <div class="card-container">
-        <div class="card left-card">Left Card</div>
-        <div class="card main-card">Main Card</div>
-        <div class="card right-card">Right Card</div>
-    </div>
-</body>
+    <script src="project.js"></script>
+  </body>
 </html>

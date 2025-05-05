@@ -1,7 +1,6 @@
 /* Import Google Poppins font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
-
 body {
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
@@ -13,13 +12,12 @@ body {
   overflow-x: hidden;
   background-color: #fafcff;
 }
-#home{
+#home {
   background-color: #fafcff;
   height: 35rem;
 }
-.section home-section{
+.section home-section {
   height: 150%;
-  
 }
 #smooth-wrapper {
   display: flex;
@@ -32,11 +30,11 @@ body {
 #smooth-content {
   width: 100%;
   height: auto;
-  will-change: transform; 
+  will-change: transform;
 }
 
 .navbar {
-  position : fixed;
+  position: fixed;
   margin-left: 470px;
   margin-top: 1rem;
   background-color: #fafcff;
@@ -81,7 +79,6 @@ body {
 
 .nav-item a:before,
 .nav-item a:after {
-  
   position: absolute;
   content: "";
   width: 150%;
@@ -162,7 +159,6 @@ body {
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
-
 
 .intro-text {
   text-align: center;
@@ -246,7 +242,7 @@ body {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border-radius: 1.75rem; 
+  border-radius: 1.75rem;
 }
 
 .flip-card-front {
@@ -266,16 +262,15 @@ body {
   object-fit: cover;
 }
 
-
-.scrolling-text p{
+.scrolling-text p {
   font-family: "Public Sans", sans-serif;
   font-size: 230px;
   font-weight: 900;
   position: absolute;
   text-align: center;
   top: -50px; /* Center vertically */
-  white-space: nowrap; 
-  animation: scroll 20s linear infinite; 
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
   z-index: -1; /* Places it behind other elements */
 }
 
@@ -288,78 +283,67 @@ body {
   }
 }
 
-
-
 .threedimages {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
   margin-top: 100px;
 }
 
 .threedimages img {
   will-change: transform;
   opacity: 1;
-  width: 270px; 
+  width: 270px;
   height: 250px;
-  object-fit: cover; 
-  transition: transform 0.1s linear; 
+  object-fit: cover;
+  transition: transform 0.1s linear;
 }
-
 
 .orangecone {
   position: absolute;
-  top: 10%; 
-  left: 20%; 
-  
+  top: 10%;
+  left: 20%;
 }
 
-.bluecylinder  {
+.bluecylinder {
   position: absolute;
-  top: 65%; 
+  top: 65%;
   left: 20%;
   transform: rotate(-180);
 }
 
 .bluestar {
   position: absolute;
-  top: 10%; 
+  top: 10%;
   right: 20%;
 }
 
-
 .purplesphere {
   position: absolute;
-  top: 37%; 
-  left: 15%; 
- 
+  top: 37%;
+  left: 15%;
 }
 
 .yellowcube {
   position: absolute;
   top: 65%; /* Middle-right */
   right: 20%;
- 
 }
 
 .greencylinder {
   position: absolute;
   top: 37%; /* Bottom-right */
   right: 15%;
-  
 }
 
-
-
-
-/* From Uiverse.io by JaydipPrajapati1910 */ 
+/* From Uiverse.io by JaydipPrajapati1910 */
 .cssbuttons-io-button {
   margin-left: 38%;
   top: 90px;
   background-color: #fff;
   font-weight: bold;
   padding: 10px 20px;
-  font-size: 20px ;
+  font-size: 20px;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -373,14 +357,14 @@ body {
   height: 2.8em;
   padding-right: 60px;
 }
-.cssbuttons-io-button p{
+.cssbuttons-io-button p {
   color: rgba(0, 0, 0, 0.855);
- font-family: "poppins";
- font-size: 25px;
- font-weight: 500;
+  font-family: "poppins";
+  font-size: 25px;
+  font-weight: 500;
 }
 .cssbuttons-io-button .icon {
-  background:  #7d2ae8;
+  background: #7d2ae8;
   margin-left: 1em;
   position: absolute;
   display: flex;
@@ -412,8 +396,6 @@ body {
   transform: scale(0.95);
 }
 
-
-
 .section {
   height: 150%;
   width: 100%;
@@ -421,26 +403,28 @@ body {
   text-align: center; /* Center-align content */
 }
 
-.section h2{
+.section h2 {
   font-size: 30px;
 }
 
 .bluestar_about {
   position: absolute; /* Use absolute positioning for precise placement */
-  top: 50%; 
+  top: 50%;
   left: 5%;
   opacity: 0.5; /* Makes the image slightly transparent */
-  transform: scale(0.8); /* Scales down the image slightly for a subtler effect */
+  transform: scale(
+    0.8
+  ); /* Scales down the image slightly for a subtler effect */
 }
 
 .purplesphere_about {
   position: absolute; /* Use absolute positioning for precise placement */
-  top: 10%; 
+  top: 0%;
   right: 5%;
-  transform: scale(0.8); /* Scales down the image slightly for a subtler effect */
+  transform: scale(
+    0.8
+  ); /* Scales down the image slightly for a subtler effect */
 }
-
-
 
 .section.about-section {
   display: flex;
@@ -449,6 +433,7 @@ body {
   position: relative;
   height: auto; /* Adjust height automatically */
   padding: 20px; /* Add some padding */
+  margin-bottom: 0;
 }
 
 .card-container {
@@ -514,11 +499,11 @@ body {
 }
 
 #cta-button {
-  font-family: 'poppins', sans-serif;
+  font-family: "poppins", sans-serif;
   padding: 10px 20px; /* Button padding */
   background-color: #fff;
   font-weight: 500;
-  font-size: 20px ;
+  font-size: 20px;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -532,18 +517,15 @@ body {
   z-index: 2; /* Higher z-index for button */
 }
 
- #cta-button {
+#cta-button {
   display: block; /* Show button when hovering over cards */
   opacity: 1; /* Make visible */
   transform: translateY(0); /* Reset position */
 }
 
-
-
 .threedimages {
   margin-top: 20px; /* Space between button and images */
 }
-
 
 .stack-section {
   display: flex;
@@ -567,7 +549,7 @@ body {
   gap: 100px; /* Spacing between cards */
   justify-content: center; /* Center cards horizontally */
   width: 100%; /* Full width of the parent */
-  max-width: 900px; 
+  max-width: 900px;
   margin-bottom: 100px;
 }
 
@@ -618,7 +600,7 @@ body {
 .stack-card p {
   font-size: 20px;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -663,13 +645,10 @@ body {
 }
 
 .stack-card:hover::after {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   opacity: 1; /* Show the hover text */
 }
-
-
-
 
 .projects-section {
   display: flex;
@@ -746,7 +725,7 @@ body {
 .project-card p {
   font-size: 20px;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -791,7 +770,7 @@ body {
 }
 
 .project-card:hover::after {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   opacity: 1; /* Show the hover text */
 }
@@ -801,45 +780,29 @@ body {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #333; /* Dark gray for contrast */
 }
 
-
-
 .project-item p {
   font-size: 18px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0; /* Remove default margin */
   color: #666; /* Light gray for description */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* General Styles */
 .contact-section {
+
+  margin-top: 150px;
   height: auto; /* Adjust height to fit content */
   width: 1550px;
   border-radius: 50px;
   background-color: #e8e6e6; /* Light background color for the entire footer */
 }
-
+.contact-section .container {
+  padding-top: 50px; /* Adjust the value as needed */
+}
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -847,8 +810,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
-
 
 /* Contact Column */
 .contact-column,
@@ -860,7 +821,7 @@ body {
 .contact-column h3,
 .links-column h3,
 .social-column h3 {
-  margin-top: 50px; /* Reduced margin for better spacing */
+  margin-top: 90px; /* Reduced margin for better spacing */
   margin-left: 50px;
   font-size: 35px;
 }
@@ -879,10 +840,8 @@ body {
   z-index: 1;
 }
 
-
 .contact-column a:hover {
   color: #ff6b35; /* Orange accent color on hover */
-
 }
 
 /* Links Column */
@@ -924,11 +883,11 @@ body {
   position: relative;
   text-align: center;
   overflow: hidden;
-  margin-top: -180px; /* Pull the branding up to overlap with the bottom */
+  margin-top: -190px; /* Pull the branding up to overlap with the bottom */
 }
 
 .branding h1 {
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-size: 235px;
   font-weight: 900;
   line-height: 1; /* Reduce line height to fit better */
@@ -950,9 +909,19 @@ body {
   background-color: #6f4eff; /* Purple neon color */
   animation: neon-pulse 1.5s infinite alternate; /* Pulsating effect */
 }
+@keyframes neon-pulse {
+  0% {
+    box-shadow: 0 0 10px #6f4eff, 0 0 20px #6f4eff, 0 0 30px #6f4eff,
+      0 0 40px #6f4eff;
+  }
+  100% {
+    box-shadow: 0 0 15px #6f4eff, 0 0 25px #6f4eff, 0 0 35px #6f4eff,
+      0 0 50px #6f4eff;
+  }
+}
 
 .cursor-button {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   width: fit-content;
   padding: 10px 20px;
   border-radius: 25px;
@@ -964,15 +933,100 @@ body {
   box-shadow: 0 0 10px rgba(111, 78, 255, 0.5); /* Add a subtle glow */
 }
 
+.timeline {
+  position: relative;
+  padding: 80px 20px; /* Add padding for visibility */
+  width: 100%;
+}
 
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #7d2ae8, #ff6b35);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
 
+.timeline-item {
+  display: flex;
+  justify-content: flex-end; /* Default to right alignment */
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
 
+.timeline-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+/* Equal width content blocks */
+.timeline-content {
+  width: 100%;
+  max-width: 500px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
 
+.timeline-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #7d2ae8, #ff6b35);
+  background-clip: text; /* Add this line for compatibility */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+.timeline-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
 
+/* Positioning left/right */
+.timeline-item.left {
+  justify-content: flex-start; /* Align left items to the start */
+}
 
+.timeline-item.left .timeline-content {
+  left: 90px;
+  margin-right: auto;
+}
 
+.timeline-item.right {
+  justify-content: flex-end; /* Align right items to the end */
+}
+
+.timeline-item.right .timeline-content {
+  right: 20px;
+  margin-left: auto;
+}
+
+/* Labels */
+.section-label {
+  margin-bottom: 20px;
+  margin-left: 170px;
+  justify-content: start;
+  font-size: 28px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #7d2ae8, #ff6b35);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  width: auto;
+}
 
 /*Media Queries*/
 

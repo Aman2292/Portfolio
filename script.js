@@ -151,3 +151,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Start smooth cursor updates
   updateCursor();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  gsap.utils.toArray(".timeline-item").forEach(item => {
+    gsap.to(item, {
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: item,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      }
+    });
+  });
+});

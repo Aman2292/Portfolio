@@ -1,0 +1,217 @@
+<!-- GSAP and ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Timeline</title>
+  
+</head>
+<style>
+.timeline {
+  position: relative;
+  padding: 80px 20px; /* Add padding for visibility */
+  width: 100%;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #7d2ae8, #ff6b35);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end; /* Default to right alignment */
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+.timeline-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Equal width content blocks */
+.timeline-content {
+   
+  width: 100%;
+  max-width: 500px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #7d2ae8, #ff6b35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Positioning left/right */
+.timeline-item.left {
+  justify-content: flex-start; /* Align left items to the start */
+}
+
+.timeline-item.left .timeline-content {
+    left: 20px;
+  margin-right: auto;
+}
+
+.timeline-item.right {
+  justify-content: flex-end; /* Align right items to the end */
+}
+
+.timeline-item.right .timeline-content {
+    right: 20px;
+  margin-left: auto;
+}
+
+/* Labels */
+.section-label {
+    margin-bottom: 20px;
+    margin-left: 170px;
+ justify-content: start;
+  font-size: 28px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #7d2ae8, #ff6b35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Make it inline-block for alignment */
+  width: auto; /* Allow it to fit the content */
+}
+
+
+</style>
+<body>
+  <section class="about-section" id="about">
+    <div class="timeline-container">
+      <h2>My Professional Journey</h2>
+      <div class="timeline">
+        
+        <!-- 🎓 Education -->
+        <div class="section-label">🎓<br>Education</div>
+
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>BSc Computer Science</h3>
+            <p>Pillai College, Panvel (2023–2025)<br>CGPA: 8.50/10</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>HSC (Science)</h3>
+            <p>Christ Academy Jr. College, 2022</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>SSC</h3>
+            <p>I.E.S Navi Mumbai High School, 2020</p>
+          </div>
+        </div>
+
+        <!-- 💼 Internships -->
+        <div class="section-label">💼<br>Internships</div>
+
+        <div class="timeline-item left internship">
+          <div class="timeline-content">
+            <h3>Help for Coders</h3>
+            <p>Content Creator Intern (Mar 2021 – Oct 2022)<br>Produced Canva posts, boosted reach by 20%.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right internship">
+          <div class="timeline-content">
+            <h3>Programming Hub</h3>
+            <p>Technical Content Intern (Apr 2024 – Jul 2024)<br>Built JavaScript projects for Udemy.</p>
+          </div>
+        </div>
+
+        <!-- 🚀 Projects -->
+        <div class="section-label">🚀<br>Projects</div>
+
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>Liftly</h3>
+            <p>Ride-sharing app with SOS & live tracking.<br><strong>Stack:</strong> Flutter, Firebase, Node.js</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>StudySphere</h3>
+            <p>Student-focused app for academic progress.<br><strong>Stack:</strong> Flutter, SQLite</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>Spotify Clone</h3>
+            <p>Music streaming UI with Firebase auth.<br><strong>Stack:</strong> Flutter, Firebase</p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>GovMedPortal</h3>
+            <p>Hospital management with real-time booking.<br><strong>Stack:</strong> Java, MySQL, HTML, CSS</p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>Expense Tracker</h3>
+            <p>Visualized categorized expenses.<br><strong>Stack:</strong> JS, Firebase</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  gsap.utils.toArray(".timeline-item").forEach(item => {
+    gsap.to(item, {
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: item,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+/* General Reset */
+/* Import Google Poppins font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fafcff;
+  color: #333;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  border-radius: 20px;
+
+  background-color: rgba(251, 243, 255, 0.699); /* Blurred effect */
+  backdrop-filter: blur(2px); /* Blur effect */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 999;
+  padding-left: 20px;
+}
+
+.nav-button {
+  text-decoration: none;
+  background-color: #6f4eff; /* Purple button */
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #5d3ac9; /* Darker purple on hover */
+}
+
+/* Title Section */
+.title-section {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title-section h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Image Gallery */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.stack-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 0 20px #6670ff0d;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.stack-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1; /* Below hover text but above image */
+  border-radius: 15px;
+}
+
+/* Image Card */
+.image-card {
+  position: relative; /* Ensure images are positioned relative to this container */
+  width: 550px; /* Width of individual cards */
+  height: 250px; /* Height of individual cards */
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 0 15px #6670ff0d;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden; /* Clip overflowing content (e.g., images larger than the card) */
+} 
+
+.image-card img {
+  position: absolute; /* Position the image relative to the card */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%) scale(1); /* Center the image */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure the image doesn't exceed the card's width */
+  max-height: 100%; /* Ensure the image doesn't exceed the card's height */
+  object-fit: cover; /* Ensure the image fills the container while maintaining aspect ratio */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth fade-out and scaling effect */
+  z-index: 1; /* Above the overlay */
+}
+
+.stack-card p {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the text horizontally */
+  color: black;
+  z-index: 3; /* Ensure text is above everything else */
+  opacity: 1; /* Initially visible */
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-out effect */
+}
+
+.stack-card:hover::before {
+  opacity: 1; /* Show the overlay */
+}
+
+.stack-card:hover img {
+  transform: translate(-50%, -50%) scale(1.2); /* Scale up the image */
+  opacity: 0; /* Slightly dim the image */
+}
+
+.stack-card:hover p {
+  opacity: 0; /* Hide the static text */
+}
+
+/* Details Section */
+.details-section {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.sidebar {
+  width: 30%;
+  position: sticky;
+  top: 100px; /* Fixed position when scrolling */
+  align-self: flex-start;
+
+  padding: 20px;
+}
+
+.sidebar p {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.buttons {
+  padding: 10px 5px;
+  flex-direction: column;
+  display: flex;
+  gap: 45px;
+  margin-top: 20px;
+}
+
+.preview-button {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 0 15px #6670ff0d;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.remix-button {
+  font-size: 16px;
+  background-color: #6f4eff; /* Purple buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 0 0 15px #6670ff0d;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.remix-button:hover {
+  background-color: #5d3ac9; /* Darker purple on hover */
+}
+
+.project-content {
+  width: 65%;
+}
+
+.project-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.project-content p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Custom Cursor */
+#custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.cursor-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #6f4eff; /* Purple neon color */
+  animation: neon-pulse 1.5s infinite alternate; /* Pulsating effect */
+}
+
+@keyframes neon-pulse {
+  0% {
+    box-shadow: 0 0 10px #6f4eff, 0 0 20px #6f4eff, 0 0 30px #6f4eff,
+      0 0 40px #6f4eff;
+  }
+  100% {
+    box-shadow: 0 0 15px #6f4eff, 0 0 25px #6f4eff, 0 0 35px #6f4eff,
+      0 0 50px #6f4eff;
+  }
+}
+
+.cursor-button {
+  font-family: "Poppins", sans-serif;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #6f4eff; /* Purple neon color */
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(111, 78, 255, 0.5); /* Add a subtle glow */
+}
